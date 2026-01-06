@@ -37,15 +37,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  16 .debug_macro  00024d8d  00000000  00000000  00011b6f  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   0000c18e  00000000  00000000  000368fc  2**0
+ 17 .debug_line   0000c190  00000000  00000000  000368fc  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    000f28d7  00000000  00000000  00042a8a  2**0
+ 18 .debug_str    000f28d7  00000000  00000000  00042a8c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000043  00000000  00000000  00135361  2**0
+ 19 .comment      00000043  00000000  00000000  00135363  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  0000323c  00000000  00000000  001353a4  2**2
+ 20 .debug_frame  0000323c  00000000  00000000  001353a8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 21 .debug_line_str 00000058  00000000  00000000  001385e0  2**0
+ 21 .debug_line_str 00000058  00000000  00000000  001385e4  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -92,7 +92,7 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+   HAL_Init();
  800021c:	f000 fa1d 	bl	800065a <HAL_Init>
   /* USER CODE BEGIN Init */
 
