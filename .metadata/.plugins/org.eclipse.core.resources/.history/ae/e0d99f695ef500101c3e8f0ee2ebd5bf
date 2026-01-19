@@ -118,10 +118,10 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-//	uint16_t raw_U = adc1_buf[0];
-//	uint16_t raw_V = adc2_buf[0];
-    v1 = (adc1_buf[0] / 4095.0f) * 3.3f;
-    v2 = (adc2_buf[0] / 4095.0f) * 3.3f;
+	uint16_t raw_U = adc1_buf[0];
+	uint16_t raw_V = adc2_buf[0];
+    v1 = ((float)raw_U / 4095.0f) * 3.3f;
+    v2 = ((float)raw_V / 4095.0f) * 3.3f;
 
     HAL_Delay(100);
   }

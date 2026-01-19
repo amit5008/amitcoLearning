@@ -241,3 +241,100 @@ Finished building: default.size.stdout
  
 Finished building: amitco.list
  
+19:41:56 **** Build of configuration Debug for project amitco ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G484xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "amitco.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\amitc\STM32CubeIDE\amitco\amitco\STM32G484VEHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="amitco.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: amitco.elf
+ 
+arm-none-eabi-size  amitco.elf 
+arm-none-eabi-objdump -h -S amitco.elf  > "amitco.list"
+   text	   data	    bss	    dec	    hex	filename
+  18076	     12	   2076	  20164	   4ec4	amitco.elf
+Finished building: default.size.stdout
+ 
+Finished building: amitco.list
+ 
+19:43:52 **** Incremental Build of configuration Debug for project amitco ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G484xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:31: error: expected ';' before ')' token
+  123 |     v1 = adc1_buf[0] / 4095.0f) * 3.3f;
+      |                               ^
+      |                               ;
+../Core/Src/main.c:123:31: error: expected statement before ')' token
+../Core/Src/main.c:123:33: error: invalid type argument of unary '*' (have 'float')
+  123 |     v1 = adc1_buf[0] / 4095.0f) * 3.3f;
+      |                                 ^~~~~~
+../Core/Src/main.c:124:23: error: expected expression before '/' token
+  124 |     v2 = adc2_buf[0]; / 4095.0f) * 3.3f;
+      |                       ^
+../Core/Src/main.c:124:32: error: expected statement before ')' token
+  124 |     v2 = adc2_buf[0]; / 4095.0f) * 3.3f;
+      |                                ^
+../Core/Src/main.c:124:34: error: invalid type argument of unary '*' (have 'float')
+  124 |     v2 = adc2_buf[0]; / 4095.0f) * 3.3f;
+      |                                  ^~~~~~
+../Core/Src/main.c:122:18: warning: unused variable 'raw_V' [-Wunused-variable]
+  122 |         uint16_t raw_V = adc2_buf[0];
+      |                  ^~~~~
+../Core/Src/main.c:121:18: warning: unused variable 'raw_U' [-Wunused-variable]
+  121 |         uint16_t raw_U = adc1_buf[0];
+      |                  ^~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:44:00 **** Incremental Build of configuration Debug for project amitco ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G484xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:123:31: error: expected ';' before ')' token
+  123 |     v1 = adc1_buf[0] / 4095.0f) * 3.3f;
+      |                               ^
+      |                               ;
+../Core/Src/main.c:123:31: error: expected statement before ')' token
+../Core/Src/main.c:123:33: error: invalid type argument of unary '*' (have 'float')
+  123 |     v1 = adc1_buf[0] / 4095.0f) * 3.3f;
+      |                                 ^~~~~~
+../Core/Src/main.c:124:23: error: expected expression before '/' token
+  124 |     v2 = adc2_buf[0]; / 4095.0f) * 3.3f;
+      |                       ^
+../Core/Src/main.c:124:32: error: expected statement before ')' token
+  124 |     v2 = adc2_buf[0]; / 4095.0f) * 3.3f;
+      |                                ^
+../Core/Src/main.c:124:34: error: invalid type argument of unary '*' (have 'float')
+  124 |     v2 = adc2_buf[0]; / 4095.0f) * 3.3f;
+      |                                  ^~~~~~
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:44:09 **** Incremental Build of configuration Debug for project amitco ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G484xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:124:22: error: expected ')' before ';' token
+  124 |     v2 = (adc2_buf[0]; / 4095.0f) * 3.3f;
+      |          ~           ^
+      |                      )
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j16 all" terminated with exit code 2. Build might be incomplete.
+19:44:18 **** Incremental Build of configuration Debug for project amitco ****
+make -j16 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32G484xx -c -I../Core/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc -I../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32G4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "amitco.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\amitc\STM32CubeIDE\amitco\amitco\STM32G484VEHX_FLASH.ld" --specs=nosys.specs -Wl,-Map="amitco.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: amitco.elf
+ 
+arm-none-eabi-size  amitco.elf 
+arm-none-eabi-objdump -h -S amitco.elf  > "amitco.list"
+   text	   data	    bss	    dec	    hex	filename
+  18064	     12	   2076	  20152	   4eb8	amitco.elf
+Finished building: default.size.stdout
+ 
+Finished building: amitco.list
+ 
+19:44:21 **** Incremental Build of configuration Debug for project amitco ****
+make -j16 all 
+arm-none-eabi-size  amitco.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18064	     12	   2076	  20152	   4eb8	amitco.elf
+Finished building: default.size.stdout
+ 
